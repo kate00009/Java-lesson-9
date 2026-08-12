@@ -1,5 +1,11 @@
 package ru.netology.javaqa.myhw9;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@AllArgsConstructor
+@Data
+
 public class Radio {
     private int maxStation = 9;
     private int minStation;
