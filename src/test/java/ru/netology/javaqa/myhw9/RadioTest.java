@@ -6,6 +6,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RadioTest {
 
     @Test
+    public void test() {
+        Radio rad = new Radio(12);
+        assertEquals(11, rad.getMaxStation());
+    }
+
+    @Test
+    public void test0() {
+        Radio rad = new Radio ();
+        assertEquals(9, rad.getMaxStation());
+    }
+
+    @Test
     public void SetStation() {
         Radio rad = new Radio();
         rad.setCurrentStation(8);
@@ -49,9 +61,9 @@ public class RadioTest {
     }
 
     @Test
-    public void NextStation9() {
-        Radio rad = new Radio();
-        rad.setCurrentStation(9);
+    public void NextStationAboveMax() {
+        Radio rad = new Radio(12);
+        rad.setCurrentStation(11);
         rad.next();
         assertEquals(0, rad.getCurrentStation());
     }
@@ -65,7 +77,7 @@ public class RadioTest {
     }
 
     @Test
-    public void PrevStation0() {
+    public void PrevStationBelowMin() {
         Radio rad = new Radio();
         rad.setCurrentStation(0);
         rad.prev();
