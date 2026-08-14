@@ -1,9 +1,7 @@
 package ru.netology.javaqa.myhw9;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@AllArgsConstructor
 @Data
 
 public class Radio {
@@ -11,25 +9,14 @@ public class Radio {
     private int minStation;
     private int currentStation;
     private int currentVolume;
+    private int quantity;
 
     public Radio() {
-        int quantity = maxStation + 1;
+        this.quantity = maxStation + 1;
     }
 
     public Radio(int quantity) {
         maxStation = quantity - 1;
-    }
-
-    public int getCurrentStation() {
-        return currentStation;
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public int getMaxStation() {
-        return maxStation;
     }
 
     public void setCurrentStation(int newCurrentStation) {
