@@ -1,6 +1,7 @@
 package ru.netology.javaqa.myhw9;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RadioTest {
@@ -13,7 +14,7 @@ public class RadioTest {
 
     @Test
     public void test0() {
-        Radio rad = new Radio ();
+        Radio rad = new Radio();
         assertEquals(9, rad.getMaxStation());
     }
 
